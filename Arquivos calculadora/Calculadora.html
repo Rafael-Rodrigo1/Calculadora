@@ -1,0 +1,56 @@
+<DOCTYPE HTML>
+  <HTML lang="PT-BR">
+    <HEAD>
+      <meta charset="UTF-8">
+      <title>CALCULADORA</title>
+      <link rel="stylesheet" href="calculadora.style.css">
+    </HEAD>
+    <BODY>
+      <div class="conteudo">
+        <div class="dentro">
+          <div class="fundo">
+            <hr>
+            <p id="resultado"></p>
+          <hr>
+            <!--botão de reset e apagar-->
+          <input type="reset" value="C" name="resertar" id="resertar" onclick="clean()"><br>
+
+         <input type="reset" value="<" name="apagar" id="apagar" onclick="back()"><br>
+
+<!--botões dos numeros-->
+<button type="button" id="setimo" onclick="clicar('7')">7</button>
+
+<button type="button" id="oitavo" onclick="clicar('8')">8</button> 
+
+<button type="button" id="nono" onclick="clicar('9')">9</button><br>
+
+<button type="button" id="quarto" onclick="clicar('4')">4</button>
+
+<button type="button" id="quinto" onclick="clicar('5')">5</button>
+
+<button type="button" id="sexto" onclick="clicar('6')">6</button><br>
+
+<button type="button" id="primeiro" onclick="clicar('1')">1</button>
+
+<button type="button" id="segundo" onclick="clicar('2')">2</button>
+
+<button type="button" id="terceiro" onclick="clicar('3')">3</button><br>
+
+<button type="button" id="zero" onclick="clicar('0')">0</button>
+
+<!--botão dos operadores-->
+           <input type="button" value="+" name="soma" id="soma" onclick="clicar('+')">
+
+           <input type="button" value="_" name="subt" id="subt" onclick="clicar('-')">
+
+           <input type="button" value="*" name="mult" id="mult" onclick="clicar('*')">
+
+           <input type="button" value="/" name="divid" id="divid" onclick="clicar('/')">
+           
+           <input type="submit" value="=" name="result" id="result" onclick="calcular()">
+          </div>
+        </div>
+      </div>
+ <script src="calculadora.script.js"></script>
+    </BODY>
+  </HTML>
