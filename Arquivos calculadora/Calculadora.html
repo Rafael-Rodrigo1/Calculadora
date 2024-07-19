@@ -2,55 +2,42 @@
   <HTML lang="PT-BR">
     <HEAD>
       <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <title>CALCULADORA</title>
-      <link rel="stylesheet" href="calculadora.style.css">
+      <link rel="stylesheet" type="text/css" href="calculadora.style.css">
     </HEAD>
     <BODY>
-      <div class="conteudo">
-        <div class="dentro">
-          <div class="fundo">
-            <hr>
-            <p id="resultado"></p>
-          <hr>
-            <!--botão de reset e apagar-->
-          <input type="reset" value="C" name="resertar" id="resertar" onclick="clean()"><br>
-
-         <input type="reset" value="<" name="apagar" id="apagar" onclick="back()"><br>
-
-<!--botões dos numeros-->
-<button type="button" id="setimo" onclick="clicar('7')">7</button>
-
-<button type="button" id="oitavo" onclick="clicar('8')">8</button> 
-
-<button type="button" id="nono" onclick="clicar('9')">9</button><br>
-
-<button type="button" id="quarto" onclick="clicar('4')">4</button>
-
-<button type="button" id="quinto" onclick="clicar('5')">5</button>
-
-<button type="button" id="sexto" onclick="clicar('6')">6</button><br>
-
-<button type="button" id="primeiro" onclick="clicar('1')">1</button>
-
-<button type="button" id="segundo" onclick="clicar('2')">2</button>
-
-<button type="button" id="terceiro" onclick="clicar('3')">3</button><br>
-
-<button type="button" id="zero" onclick="clicar('0')">0</button>
-
-<!--botão dos operadores-->
-           <input type="button" value="+" name="soma" id="soma" onclick="clicar('+')">
-
-           <input type="button" value="_" name="subt" id="subt" onclick="clicar('-')">
-
-           <input type="button" value="*" name="mult" id="mult" onclick="clicar('*')">
-
-           <input type="button" value="/" name="divid" id="divid" onclick="clicar('/')">
-           
-           <input type="submit" value="=" name="result" id="result" onclick="calcular()">
-          </div>
+      <div id="calc" class="calc">
+        <div id="nome" class="nome">
+          <h1>CALCULADORA</h1>
         </div>
-      </div>
+            <div id="div_display" class="div_display">
+              <p id="resultado">0</p>
+            </div>
+<!--botões dos numeros-->
+<div id="div_teclas" class="div_teclas">
+<button id="tLimpar" class="tecla">C</button>
+<button id="tApagar" class="tecla">></button>
+<button id="t7" class="tecla num">(</button>
+<button id="t7" class="tecla num">)</button>
+<button id="t7" class="tecla num">7</button>
+<button id="t8" class="tecla num">8</button> 
+<button id="t9" class="tecla num">9</button>
+<button id="t+" class="tecla teclaOp op">+</button>
+<button id="t4" class="tecla num">4</button>
+<button id="t5" class="tecla num">5</button>
+<button id="t6" class="tecla num">6</button>
+<button id="t-" class="tecla teclaOp op">-</button>
+<button id="t1" class="tecla num">1</button>
+<button id="t2" class="tecla num">2</button>
+<button id="t3" class="tecla num">3</button>
+<button id="tx" class="tecla teclaOp op">x</button>
+<button id="t0" class="tecla num">0</button>
+<button id="tseparador" class="tecla num">,</button>
+<button id="t_igual" class="tecla teclaOp res">=</button>
+<button id="td" class="tecla teclaOp op">/</button>
+</div>
+</div>
  <script src="calculadora.script.js"></script>
     </BODY>
   </HTML>

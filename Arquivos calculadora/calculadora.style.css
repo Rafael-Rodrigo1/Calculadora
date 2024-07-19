@@ -1,209 +1,85 @@
-@charset "UTF-8";
-
-body {
-  background-color: rgb(255, 192, 203);
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  box-sizing: border-box;
+  font-size: large;
 }
 
-/*centralizando as div*/
+body{
+  background:linear-gradient(to left top,  #0c0504, #cd2309);
+}
 
-.conteudo {
+.calc {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+border-radius: 5px;
+border: 3px solid seagreen;
+padding: 50px;
+}
+
+#nome{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 250px;
+height: 30px;
+color: rgb(11, 11, 11);
+margin:10px 0 30px 0;
+}
+
+.div_display {
+  display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.div_teclas {
+  display: flex;
+justify-content: center;
+align-items: center;
+  width: 250px;
+  flex-wrap: wrap;
+  background-color: blue;
+  box-shadow: 1px 1px 5px black;
+  border-radius:0 0 20px 20px;
+  height: 350px;
+}
+
+.tecla {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
-}
-.fundo{
-  background-color: rgb(17, 3, 139);
-  padding: 10px;
-  border-radius: 20px;
-  margin-top: -20px;
-  box-shadow: 1px 5px 8px black;
+  width: 50px;
+  height: 50px;
+  margin: 4px;
+  background-color: black;
+  border: 3px solid #2A2727;
+  font-weight: bold;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
 }
 
-/*tela de resultado*/
-p {
-  color: white;
-  height: 10px;
+.teclaOp{
+color: orange !important;
+}
+
+.div_display{
+  width: 250px;
+  background-color: blue;
+  box-shadow: 1px 1px 5px black;
   text-align: right;
-  font-size: 20pt;
+  padding: 5px;
+  border-radius: 20px 20px 0 0;
+  border: white;
+  border-color: white;
+  font-family: monospace;
+  font-size: larger;
 }
 
-/*numeros da calculadora*/
-button#setimo {
-  display: inline-block;
-  padding: 20px;
-  border-radius: 40px;
-  margin-top: 50px;
-  background: black;
-  color: white;
-border-color: rgb(135, 129, 195);
-  cursor: pointer;
-}
-
-button#oitavo {
-  display: inline-block;
-  padding: 20px;
-  border-radius: 40px;
-  background: black;
-  color: white;
-  border-color: rgb(135, 129, 195);
-  cursor: pointer;
-}
-
-button#nono {
-  display: inline-block;
-  padding: 20px;
-  border-radius: 40px;
-  background: black;
-  color: white;
-  cursor: pointer;
-}
-
-button#quarto {
-  display: inline-block;
- padding: 20px;
- margin-top: 10px;
- border-radius: 40px;
- background: black;
- color: white;
- cursor: pointer;
-}
-
-button#quinto {
-  display: inline-block;
- padding: 20px;
- border-radius: 40px;
- background: black;
- color: white;
- cursor: pointer;
-}
-
-button#sexto {
-  display: inline-block;
- padding: 20px;
- border-radius: 40px;
- background: black;
- color: white;
- cursor: pointer;
-}
-
-button#primeiro {
-  display: inline-block;
-   padding: 20px;
-   margin-top: 10px;
-   border-radius: 40px;
-   background: black;
-   color: white;
-   cursor: pointer;
- }
-
- button#segundo {
-  display: inline-block;
- padding: 20px;
- border-radius: 40px;
- background: black;
- color: white;
- cursor: pointer;
-}
-
-button#terceiro {
-  display: inline-block;
- padding: 20px;
- border-radius: 40px;
- background: black;
- color: white;
- cursor: pointer;
-}
-
-button#zero {
-display: inline-block;
-position: relative;
- padding: 20px;
- border-radius: 40px;
- margin-top: 10px;
- background: black;
- color: white;
- margin-left: 50px;
- cursor: pointer;
-}
-
-/*botoes de resultado, resert e apagar*/
-input#resertar {
-   display: inline-block;
-   position: absolute;
-  padding: 20px;
-  margin-bottom: -60px;
-  border-radius: 40px;
-  background: black;
-  color: #FF8C00;
-  cursor: pointer;
-}
-input#apagar {
-  display: inline-block;
-  position: relative;
-  margin-top: -20px;
-  margin-bottom: -40px;
-  padding: 20px;
-  margin-left: 58px;
-  border-radius: 20px;
-  background: black;
-  color: #FF8C00;
-
-  cursor: pointer;
-}
-input#result {
-  padding: 20px;
-  background: #FF8C00;
-  margin-top: 20px;
-  margin-left: 170px;
-  color: #FFFF;
-  border-radius: 40px;
-  border-color: #FF8C00;
-  cursor: pointer;
-}
-
-/*operadores*/
-input#soma {
-  display: flex;
-  padding: 20px;
-  margin-top: -335px;
-  margin-left: 170px;
-  border-radius: 40px;
-  background: black;
-  color: #FF8C00;
-
-  cursor: pointer;
-}
-input#subt {
-  display: flex;
-  padding: 20px;
-  margin-top: 10px;
-  margin-left: 170px;
-  border-radius: 40px;
-  background: black;
-  color: #FF8C00;
-
-  cursor: pointer;
-}
-input#mult {
-  display: flex;
-  padding: 20px;
-  margin-top: 10px;
-  margin-left: 170px;
-  border-radius: 40px;
-  background: black;
-  color: #FF8C00;
-
- cursor: pointer;
-}
-input#divid {
-  display: flex;
-  padding: 20px;
-  margin-top: 10px;
-  margin-left: 170px;
-  border-radius: 40px;
-  background: black;
-  color: #FF8C00;
-
-  cursor: pointer;
+#resultado{
+  text-align: right;
 }
